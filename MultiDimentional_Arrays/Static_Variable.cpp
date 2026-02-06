@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+static int a = 0;
 
 auto max(auto x, auto y){
     static int a = 1;
