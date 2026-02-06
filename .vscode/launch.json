@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/CPP_Practice/c-_topics/MultiDimentional_Arrays",
-      "program": "d:/CPP_Practice/c-_topics/MultiDimentional_Arrays/build/Debug/outDebug",
+      "cwd": "d:/CPP_Practice/c-_topics/CPP_concepts",
+      "program": "d:/CPP_Practice/c-_topics/CPP_concepts/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
