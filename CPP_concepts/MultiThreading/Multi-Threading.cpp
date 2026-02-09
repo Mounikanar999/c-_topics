@@ -1,6 +1,8 @@
 #include <iostream>
 #include <memory>
 #include <chrono>
+#include <thread>
+// #include <algorithm>
 // #include <algorithm>
 
 class rectangle{
@@ -231,16 +233,20 @@ int main(){
     // un_pt->display();
 
     auto start_time = std::chrono::high_resolution_clock::now();
-    std::shared_ptr<rectangle> un_pt = std::make_unique<rectangle> (5, 8);
-    un_pt->display();
+    // std::shared_ptr<rectangle> un_pt = std::make_unique<rectangle> (5, 8);
+    // un_pt->display();
+
+    // creating a lambda function to pass unique pointer variable a arguments.
+    std::thread T1();
 
     // // std::shared_ptr<rectangle> un_pt2 = std::make_unique<rectangle> (un_pt);
-    // std::shared_ptr<rectangle> un_pt2(un_pt);
-    // un_pt2->display();
+    std::shared_ptr<rectangle> un_pt2(un_pt);
+    un_pt2->display();
     auto end_time = std::chrono::high_resolution_clock::now();
 
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
-    std::cout << "seconds: " << duration.count()/1000000 << std::endl;
+    // std::cout << "seconds: " << duration.count()/1000000 << std::endl;
+    std::cout << "seconds: " << (duration.count()/(1e+6)) << std::endl;
     
     return 0;
 }
